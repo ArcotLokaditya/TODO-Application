@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>TODO App</h1>
+    <div id="container">
+        <form action="/new_task" method="post">
+            <div>
+                <label for="Description">DESCRIPTION</label>
+                <input class="input" type="text" name="Description" id="Description" placeholder="What do you need to do?" required>
+            </div>
+            <div>
+                <label for="Category">CATEGORY</label>
+                <select id="Category" name="Category" required>
+                    <option value="Choose a Category">Choose a Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="datepicker">
+                <label for="datepicker">DUE DATE</label>
+                <input type="date" id="datepicker" name="Due_date" required>
+            </div>
+            <button class="add_button">Add Task</button>
+        </form>
+        <form action="/delete_selected_tasks" method="get">
+            <button type="submit" class="delete_button">Delete Tasks</button>
+            <ul>
+                <% for (let i of tasks) { %>
+                    <li class="task_card">
+                        <input type="checkbox" class="task_checkbox" name="selectedTasks" value="<%= i._id %>">
+                        <div><p><%= i.Description %></p>
+                        <p class="due_date_paragraph"><i class="fas fa-calendar-alt">&nbsp;</i><%= i.Due_date %></p>
+                        </div>
+                        <button class="<%= i.Category %>" disabled><%= i.Category %></button> 
+                    </li>
+                <% } %>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

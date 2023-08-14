@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #726f6f;
+  }
+  
+  #container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    margin-bottom: 10px;
+    font-weight:500;
+    color: #888686;
+  }
+  
+  .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .datepicker {
+    margin-bottom: 20px;
+  }
+
+  .datepicker p {
+    font-size: 0.3em; /* Adjust the font size as needed */
+}
+  
+  button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .delete_button{
+    background-color: #e7231c;
+    color: #fff;
+  }
+  
+  .add_button:hover {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+  .delete_button:hover {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+  .Personal{
+    background-color: #3479d4;
+  }
+
+  .Work{
+    background-color: #b32ec5;
+  }
+
+  .School{
+    background-color: #e6b618;
+  }
+
+  .Cleaning{
+    background-color: #37da40;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  .task_card {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #c1d66a;
+    border-radius: 5px;
+    background-color: #f7f8c5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+ 
+  
+  .task_card:hover {
+    box-shadow: 0 0 10px rgba(170, 164, 164, 0.2);
+  }
+  
+  .task_checkbox {
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+.task_card p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.task_card .due_date_paragraph {
+    margin: 0;
+    margin-top: 3px;
+    font-size: 0.8em;
+    color: #333;
+}
